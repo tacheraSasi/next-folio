@@ -10,7 +10,7 @@ import Skills from "./Skills";
 import About from "./About";
 import Hero from "./Hero";
 
-export default function Home() {
+export default function Folio() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
