@@ -17,7 +17,7 @@ export default function Hero() {
       },
     });
   }, [controls]);
-
+     
   return (
     <section
       id="home"
