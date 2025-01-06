@@ -48,7 +48,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Explore My Work
+          <a href="#projects">Explore My Work</a>
         </motion.button>
       </div>
       <motion.div
