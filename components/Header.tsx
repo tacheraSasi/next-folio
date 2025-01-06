@@ -60,7 +60,7 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-8">
-          {["About", "Skills", "Projects", "Contact"].map((item) => (
+          {["About", "Skills", "Projects", "Contact","Blog"].map((item) => (
             <motion.li
               key={item}
               whileHover={{ scale: 1.1 }}
@@ -87,7 +87,7 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
             >
               <ul className="flex flex-col items-center space-y-4 py-4">
-                {["About", "Skills", "Projects", "Contact"].map((item) => (
+                {["About", "Skills", "Projects", "Contact","Blog"].map((item) => (
                   <motion.li
                     key={item}
                     whileHover={{ scale: 1.1 }}
@@ -96,7 +96,7 @@ export default function Header() {
                     <a
                       href={`#${item.toLowerCase()}`}
                       className="text-white hover:text-green-400 transition-colors"
-                      onClick={() => setIsMenuOpen(false)} // Close menu on link click
+                      onClick={() => setIsMenuOpen(false)} // Closes menu on link click
                     >
                       {item}
                     </a>

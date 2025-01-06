@@ -9,6 +9,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import About from "./About";
 import Hero from "./Hero";
+import Blog from "./Blog";
 
 export default function Folio() {
   const { scrollYProgress } = useScroll();
@@ -32,6 +33,7 @@ export default function Folio() {
           <About />
           <Skills />
           <Projects />
+          <Blog/>
           <Contact />
         </main>
         <Footer />
