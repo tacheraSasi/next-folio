@@ -157,4 +157,11 @@ export const projects = [
     tech: ["Typescript", "php", "golang", "python"],
     url: "https://ekilie.com",
   },
+  {
+    title: "ellie",
+    description: "Revolutionalized Local AI assistant (Terminal-based)",
+    image: "/ekilie.png",
+    tech: ["golang"],
+    url: "https://github.com/tacheraSasi/ellie",
+  },
 ];
