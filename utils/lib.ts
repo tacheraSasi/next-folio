@@ -160,7 +160,7 @@ export const projects = [
   {
     title: "ellie",
     description: "Revolutionalized Local AI assistant (Terminal-based)",
-    image: "/ekilie.png",
+    image: "/ellie.png",
     tech: ["golang"],
     url: "https://github.com/tacheraSasi/ellie",
   },
