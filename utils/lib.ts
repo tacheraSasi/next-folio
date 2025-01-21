@@ -95,7 +95,7 @@ export const skillCategories = [
 export const devEnvironment = [
   { name: "OS", value: "Ubuntu 20.04 LTS, GNOME" },
   { name: "Editor", value: "ZED, NeoVim" },
-  { name: "Databases", value: "PostgreSQL, MySQL, SQLite" },
+  { name: "Databases", value: "PostgreSQL, MySQL, SQLite, MongoDB" },
   { name: "Other Tools", value: "Git, Prisma, HTMX" },
   { name: "Local assistant", value: "ellie, magreth" },
 ];
@@ -103,8 +103,7 @@ export const devEnvironment = [
 export const projects = [
   {
     title: "VintLang",
-    description:
-      "A powerful programming language . ",
+    description: "A powerful programming language . ",
     image: "/vintlang-dark.png",
     tech: ["Golang"],
     url: "https://vintlang.ekilie.com",
@@ -148,7 +147,14 @@ export const projects = [
     title: "trendUI",
     description: "Contributer @trendUI",
     image: "/trendui.png",
-    tech: ["Typescript","react-native "],
+    tech: ["Typescript", "react-native "],
     url: "https://trendui.com",
+  },
+  {
+    title: "ekilie",
+    description: "Creator of all ekilie products",
+    image: "/ekilie.png",
+    tech: ["Typescript", "php", "golang", "python"],
+    url: "https://ekilie.com",
   },
 ];
