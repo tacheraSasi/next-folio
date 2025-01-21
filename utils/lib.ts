@@ -144,4 +144,11 @@ export const projects = [
     tech: ["Laravel", "MySQL", "PHP", "TailwindCSS"],
     url: "https://insights.ekilie.com",
   },
+  {
+    title: "trendUI",
+    description: "Contributer @trendUI",
+    image: "/trendui.png",
+    tech: ["Typescript","react-native "],
+    url: "https://trendui.com",
+  },
 ];

@@ -39,7 +39,7 @@ export default function About() {
             I&apos;m a passionate web developer with a keen eye for design and a love
             for creating seamless user experiences. With expertise in modern web
             technologies, I bring ideas to life through clean, efficient code
-            and stunning visuals. CEO @{" "}
+            and stunning visuals. Creator @{" "}
             <a
               href="https://ekilie.com?refferer=ceo-portifolio"
               target="_blank"
