@@ -56,8 +56,8 @@ export default function Projects() {
                   ))}
                 </div>
                 <motion.a
-                  href={project.url} // Use href to link to the project URL
-                  target="_blank" // Opens the link in a new tab
+                  href={project.url}
+                  target="_blank" 
                   rel="noopener noreferrer"
                   className="bg-gradient-to-r from-green-400 to-green-600 text-white px-6 py-3 rounded-full text-sm font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform hover:scale-110"
                   whileHover={{ scale: 1.05 }}

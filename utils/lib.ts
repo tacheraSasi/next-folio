@@ -165,3 +165,5 @@ export const projects = [
     url: "https://github.com/tacheraSasi/ellie",
   },
 ];
+
+console.log(projects.length)
