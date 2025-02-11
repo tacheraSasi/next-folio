@@ -15,7 +15,8 @@ export default function Contact() {
   const [status, setStatus] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(false);
 
-  const mailer = new EkiliRelay(process.env.RELAY_API_KEY || "");
+  console.log(process.env.NEXT_PUBLIC_RELAY_API_KEY)
+  const mailer = new EkiliRelay(process.env.NEXT_PUBLIC_RELAY_API_KEY || "");
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
