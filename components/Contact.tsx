@@ -24,7 +24,7 @@ export default function Contact() {
     setStatus("");
     try {
       const response = await mailer.sendEmail(
-        "support@ekilie.com",
+        "tachera@ekilie.com",
         `Message from ${name}`,
         `Message: ${message} From: ${name} <${email}>`,
         `From: ${name} <${email}>`
