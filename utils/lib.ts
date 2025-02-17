@@ -164,5 +164,12 @@ export const projects = [
     tech: ["golang"],
     url: "https://github.com/tacheraSasi/ellie",
   },
+  {
+    title: "Transliflow",
+    description: "AI-powered collaborative translation platform",
+    image: "/transliflow.png",
+    tech: ["Typescript,nextjs,prisma,mysql"],
+    url: "https://transliflow.vercel.app",
+  },
 ];
 
