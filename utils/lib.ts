@@ -52,6 +52,10 @@ export const skillCategories = [
         icon: "https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white",
       },
       {
+        name: "Nestjs",
+        icon: "https://img.shields.io/badge/-Nest.js-339933?style=for-the-badge&logo=node.js&logoColor=white",
+      },
+      {
         name: "Next.js",
         icon: "https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white",
       },
