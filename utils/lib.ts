@@ -100,7 +100,7 @@ export const devEnvironment = [
   { name: "OS", value: "Ubuntu 20.04 LTS, GNOME" },
   { name: "Editor", value: "ZED, NeoVim" },
   { name: "Databases", value: "PostgreSQL, MySQL, SQLite, MongoDB" },
-  { name: "Other Tools", value: "Git, Prisma, HTMX" },
+  { name: "Other Tools", value: "Git, Prisma, HTMX, Docker, ellieClI" },
   { name: "Local assistant", value: "ellie, magreth" },
 ];
 
