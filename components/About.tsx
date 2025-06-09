@@ -41,11 +41,11 @@ export default function About() {
             technologies, I bring ideas to life through clean, efficient code
             and stunning visuals. Creator @{" "}
             <a
-              href="https://ekilie.com?refferer=ceo-portifolio"
+              href="https://vintlang.ekilie.com?refferer=creator-portifolio"
               target="_blank"
               className="text-green-300 cursor-pointer hover:underline"
             >
-              ekilie
+              VintLang
             </a>
           </p>
           <p className="text-lg text-neutral-300">
