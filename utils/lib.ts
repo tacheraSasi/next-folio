@@ -11,12 +11,16 @@ export const skillCategories = [
         icon: "https://img.shields.io/badge/-PHP-777BB4?style=for-the-badge&logo=php&logoColor=white",
       },
       {
+        name: "TypeScript",
+        icon: "https://img.shields.io/badge/-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+      },
+      {
         name: "Python",
         icon: "https://img.shields.io/badge/-Python-3776AB?style=for-the-badge&logo=python&logoColor=white",
       },
       {
-        name: "TypeScript",
-        icon: "https://img.shields.io/badge/-TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white",
+        name: "Rust",
+        icon: "https://img.shields.io/badge/-Rust-000000?style=for-the-badge&logo=rust&logoColor=white",
       },
       {
         name: "Java",
@@ -36,6 +40,22 @@ export const skillCategories = [
     title: "Frameworks & Tools",
     skills: [
       {
+        name: "Gin",
+        icon: "https://img.shields.io/badge/-Gin-007396?style=for-the-badge&logo=gin&logoColor=white",
+      },
+      {
+        name: "Echo",
+        icon: "https://img.shields.io/badge/-Echo-007396?style=for-the-badge&logo=echo&logoColor=white",
+      },
+      {
+        name: "Fiber",
+        icon: "https://img.shields.io/badge/-Fiber-00C7B7?style=for-the-badge&logo=gofiber&logoColor=white",
+      },
+      {
+        name: 'wails',
+        icon: 'https://img.shields.io/badge/-Wails-4F5B93?style=for-the-badge&logo=wails&logoColor=white',
+      },
+      {
         name: "Django",
         icon: "https://img.shields.io/badge/-Django-092E20?style=for-the-badge&logo=django&logoColor=white",
       },
@@ -48,13 +68,8 @@ export const skillCategories = [
         icon: "https://img.shields.io/badge/-React-61DAFB?style=for-the-badge&logo=react&logoColor=black",
       },
       {
-        name: "Node.js",
-        icon: "https://img.shields.io/badge/-Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white",
-      },
-      {
         name: "Nestjs",
-        icon: "https://img.shields.io/badge/-Nest.js-339933?style=for-the-badge&logo=node.js&logoColor=white",
-      },
+        icon: "https://img.shields.io/badge/-NestJS-E0234E?style=for-the-badge&logo=nestjs&logoColor=white",},
       {
         name: "Next.js",
         icon: "https://img.shields.io/badge/-Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white",
@@ -158,14 +173,14 @@ export const projects = [
     title: "ekilie",
     description: "Creator of all ekilie products",
     image: "/ekilie.png",
-    tech: ["Typescript", "php", "golang", "python"],
+    tech: ["Typescript", "php", "Golang", "python"],
     url: "https://ekilie.com",
   },
   {
     title: "ellie",
     description: "Revolutionalized Local AI assistant (Terminal-based)",
     image: "/ellie.png",
-    tech: ["golang"],
+    tech: ["Golang","Rust"],
     url: "https://github.com/tacheraSasi/ellie",
   },
   {
