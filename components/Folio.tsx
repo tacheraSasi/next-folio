@@ -10,6 +10,7 @@ import Skills from "./Skills";
 import About from "./About";
 import Hero from "./Hero";
 import Blog from "./Blog";
+import SplashCursor from "@/components/SplashCursor";
 
 export default function Folio() {
   const { scrollYProgress } = useScroll();
@@ -21,6 +22,7 @@ export default function Folio() {
 
   return (
     <>
+    <SplashCursor />
       <div className="bg-neutral-900 text-white min-h-screen">
         <StarryBackground />
         <motion.div
