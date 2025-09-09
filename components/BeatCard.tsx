@@ -1,9 +1,9 @@
 import { motion } from 'framer-motion';
 import { Calendar, Music, Clock, Hash } from 'lucide-react';
 import { Beat } from '@/data/musicCatalog';
-import AudioPlayer from './AudioPlayer';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import AudioPlayer from '@/components/AudioPlayer';
 
 interface BeatCardProps {
   beat: Beat;
