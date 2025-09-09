@@ -5,6 +5,7 @@ import BeatCard from '@/components/BeatCard';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { mockBeats } from '@/data/music';
+import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@radix-ui/react-select';
 
 export default function MusicCatalog() {
   const [searchTerm, setSearchTerm] = useState('');
