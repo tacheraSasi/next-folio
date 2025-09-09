@@ -1,5 +1,5 @@
 export default function Loader() {
-  return ( //Will change to a more prittier loader from css-loader.com
+  return ( //TODO: Will change to a more prettier loader from css-loader.com
     <svg
       className="animate-spin h-5 w-5 mr-3 text-white"
       xmlns="http://www.w3.org/2000/svg"
