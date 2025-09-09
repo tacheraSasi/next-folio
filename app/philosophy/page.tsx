@@ -166,7 +166,7 @@ export default function PhilosophyPage() {
           </section>
 
           {/* Daily Structure */}
-          <section className="px-6 pb-12">
+          {/* <section className="px-6 pb-12">
             <div className="container mx-auto max-w-4xl">
               <motion.div
                 className="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-8 border border-gray-700/50"
@@ -219,7 +219,7 @@ export default function PhilosophyPage() {
                 </div>
               </motion.div>
             </div>
-          </section>
+          </section> */}
 
           {/* Principles */}
           <section className="px-6 pb-20">
