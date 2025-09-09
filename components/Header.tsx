@@ -67,7 +67,7 @@ export default function Header() {
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href={item === "Music" ? "/music" : `#${item.toLowerCase()}`}
+                href={item === "Music" ? "/music" : `/#${item.toLowerCase()}`}
                 className="text-white hover:text-green-400 transition-colors"
               >
                 {item}
