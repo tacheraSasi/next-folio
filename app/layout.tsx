@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import TopScrollIndicator from "@/components/TopScrollIndicator";
+import { generateMetadata, generateStructuredData, defaultConfig } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,19 +15,43 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Tachera W Sasi",
-  description: "Tachera W Sasi's portfolio. A passionate web developer and Golang enthusiast with expertise in modern web technologies. CEO @ ekilie.",
-  keywords:"Tachera W Sasi,Tach, ekilie ceo,sasi, web developer, Golang, PHP, Python, TypeScript, Java, C++, JavaScript, Django, React, Node.js, Next.js, React Native, PostgreSQL, Docker, Gin, Fiber, Express.js, Hono, Ubuntu, VSCode, NeoVim, Prisma, HTMX"
-};
+export const metadata: Metadata = generateMetadata({
+  title: defaultConfig.defaultTitle,
+  description: defaultConfig.defaultDescription,
+  canonical: '/',
+  ogType: 'website'
+});
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = generateStructuredData({
+    title: defaultConfig.defaultTitle,
+    description: defaultConfig.defaultDescription,
+    canonical: '/',
+    ogType: 'website'
+  })
+
   return (
     <html lang="en">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify([
+              structuredData.personSchema,
+              structuredData.websiteSchema
+            ])
+          }}
+        />
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/icon.svg" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#000000" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
