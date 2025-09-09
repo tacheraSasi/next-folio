@@ -18,7 +18,7 @@ export default function Folio() {
       <div className="bg-neutral-900 text-white min-h-screen">
         <StarryBackground />
         <Header />
-        <main>
+        <main id="main-content">
           <Hero />
           <About />
           <Skills />
