@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import { generateMetadata as generateSEOMetadata } from "@/lib/seo";
+import StructuredData from "@/components/StructuredData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -12,19 +14,42 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Tachera W Sasi",
-  description: "Tachera W Sasi's portfolio. A passionate web developer and Golang enthusiast with expertise in modern web technologies. CEO @ ekilie.",
-  keywords:"Tachera W Sasi,Tach, ekilie ceo,sasi, web developer, Golang, PHP, Python, TypeScript, Java, C++, JavaScript, Django, React, Node.js, Next.js, React Native, PostgreSQL, Docker, Gin, Fiber, Express.js, Hono, Ubuntu, VSCode, NeoVim, Prisma, HTMX"
-};
+export const metadata: Metadata = generateSEOMetadata({
+  title: "Blog",
+  description: "Technical articles and insights from Tachera W Sasi on web development, Golang, and modern software engineering practices.",
+  keywords: "blog, articles, web development, Golang, TypeScript, React, Next.js, software engineering, tutorials, tech insights",
+  url: "https://tacherasasi.dev/blog",
+  type: "website",
+});
 
 interface Props{
   children:React.ReactNode
 }
 
 export default function BlogLayout({children}:Readonly<Props>){
+  const blogSchema = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Tachera W Sasi's Blog",
+    "description": "Technical articles and insights on web development and software engineering",
+    "url": "https://tacherasasi.dev/blog",
+    "author": {
+      "@type": "Person",
+      "name": "Tachera W Sasi",
+      "url": "https://tacherasasi.dev"
+    },
+    "inLanguage": "en-US",
+    "publisher": {
+      "@type": "Person",
+      "name": "Tachera W Sasi"
+    }
+  };
+
   return(
     <html lang="en">
+      <head>
+        <StructuredData data={blogSchema} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >

@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/react"
 import TopScrollIndicator from "@/components/TopScrollIndicator";
+import StructuredData from "@/components/StructuredData";
+import { generateMetadata as generateSEOMetadata, generateStructuredData } from "@/lib/seo";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,19 +16,35 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Tachera W Sasi",
-  description: "Tachera W Sasi's portfolio. A passionate web developer and Golang enthusiast with expertise in modern web technologies. CEO @ ekilie.",
-  keywords:"Tachera W Sasi,Tach, ekilie ceo,sasi, web developer, Golang, PHP, Python, TypeScript, Java, C++, JavaScript, Django, React, Node.js, Next.js, React Native, PostgreSQL, Docker, Gin, Fiber, Express.js, Hono, Ubuntu, VSCode, NeoVim, Prisma, HTMX"
-};
+export const metadata: Metadata = generateSEOMetadata();
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const structuredData = generateStructuredData();
+  
   return (
     <html lang="en">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="theme-color" content="#171717" />
+        <meta name="msapplication-TileColor" content="#171717" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        
+        {/* Structured Data */}
+        <StructuredData data={[
+          structuredData.person,
+          structuredData.organization,
+          structuredData.website,
+          structuredData.breadcrumb
+        ]} />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
