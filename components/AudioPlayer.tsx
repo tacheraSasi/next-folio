@@ -68,7 +68,7 @@ export default function AudioPlayer({ audioUrl, title }: AudioPlayerProps) {
   };
 
   return (
-    <div className="bg-muted/10 rounded-lg p-4 space-y-3">
+    <div className="bg-neutral-700/30 rounded-lg p-4 space-y-3">
       <audio
         ref={audioRef}
         src={audioUrl}
@@ -80,7 +80,7 @@ export default function AudioPlayer({ audioUrl, title }: AudioPlayerProps) {
           variant="outline"
           size="icon"
           onClick={togglePlay}
-          className="shrink-0"
+          className="shrink-0 bg-neutral-600 border-gray-600 text-white hover:bg-green-400 hover:text-black"
         >
           {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
         </Button>
@@ -93,7 +93,7 @@ export default function AudioPlayer({ audioUrl, title }: AudioPlayerProps) {
             onValueChange={handleSeek}
             className="w-full"
           />
-          <div className="flex justify-between text-sm text-muted-foreground">
+          <div className="flex justify-between text-sm text-gray-400">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
           </div>
@@ -101,7 +101,7 @@ export default function AudioPlayer({ audioUrl, title }: AudioPlayerProps) {
       </div>
 
       <div className="flex items-center gap-2">
-        <Volume2 className="w-4 h-4 text-muted-foreground" />
+        <Volume2 className="w-4 h-4 text-gray-400" />
         <Slider
           value={[volume]}
           max={1}
