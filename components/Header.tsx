@@ -60,14 +60,14 @@ export default function Header() {
 
         {/* Desktop Navigation */}
         <ul className="hidden lg:flex space-x-8">
-          {["About", "Skills", "Projects", "Music", "Contact","Blog"].map((item) => (
+          {["About", "Skills", "Projects", "Music", "Philosophy", "Contact","Blog"].map((item) => (
             <motion.li
               key={item}
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
             >
               <a
-                href={item === "Music" ? "/music" : `/#${item.toLowerCase()}`}
+                href={item === "Music" ? "/music" : item === "Philosophy" ? "/philosophy" : `/#${item.toLowerCase()}`}
                 className="text-white hover:text-green-400 transition-colors"
               >
                 {item}
@@ -87,14 +87,14 @@ export default function Header() {
               transition={{ type: "spring", stiffness: 200, damping: 20 }}
             >
               <ul className="flex flex-col items-center space-y-4 py-4">
-                {["About", "Skills", "Projects", "Music", "Contact","Blog"].map((item) => (
+                {["About", "Skills", "Projects", "Music", "Philosophy", "Contact","Blog"].map((item) => (
                   <motion.li
                     key={item}
                     whileHover={{ scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
                   >
                     <a
-                      href={item === "Music" ? "/music" : `#${item.toLowerCase()}`}
+                      href={item === "Music" ? "/music" : item === "Philosophy" ? "/philosophy" : `#${item.toLowerCase()}`}
                       className="text-white hover:text-green-400 transition-colors"
                       onClick={() => setIsMenuOpen(false)} // Closes menu on link click
                     >
