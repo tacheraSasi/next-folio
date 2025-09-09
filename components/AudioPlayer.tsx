@@ -18,6 +18,7 @@ export default function AudioPlayer({ audioUrl, title }: AudioPlayerProps) {
   useEffect(() => {
     const audio = audioRef.current;
     if (!audio) return;
+    console.log({title})
 
     const updateTime = () => setCurrentTime(audio.currentTime);
     const updateDuration = () => setDuration(audio.duration);
