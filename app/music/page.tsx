@@ -2,17 +2,16 @@ import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Search, Filter, Music } from 'lucide-react';
 import BeatCard from '@/components/BeatCard';
-import { mockBeats, Beat } from '@/data/musicCatalog';
 import { Input } from '@/components/ui/input';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Button } from '@/components/ui/button';
+import { mockBeats } from '@/data/music';
 
 export default function MusicCatalog() {
   const [searchTerm, setSearchTerm] = useState('');
   const [genreFilter, setGenreFilter] = useState('all');
   const [moodFilter, setMoodFilter] = useState('all');
 
-  const filteredBeats = mockBeats.filter((beat: Beat) => {
+  const filteredBeats = mockBeats.filter((beat) => {
     const matchesSearch = beat.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          beat.genre.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          beat.mood.toLowerCase().includes(searchTerm.toLowerCase());
