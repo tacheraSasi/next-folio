@@ -1,29 +1,37 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { Search, Filter, Music } from 'lucide-react';
-import BeatCard from '@/components/BeatCard';
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-import { mockBeats } from '@/data/music';
-import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from '@radix-ui/react-select';
+"use client"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Search, Filter, Music } from "lucide-react";
+import BeatCard from "@/components/BeatCard";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { mockBeats } from "@/data/music";
+import {
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
+} from "@radix-ui/react-select";
 
 export default function MusicCatalog() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [genreFilter, setGenreFilter] = useState('all');
-  const [moodFilter, setMoodFilter] = useState('all');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [genreFilter, setGenreFilter] = useState("all");
+  const [moodFilter, setMoodFilter] = useState("all");
 
   const filteredBeats = mockBeats.filter((beat) => {
-    const matchesSearch = beat.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         beat.genre.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         beat.mood.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesGenre = genreFilter === 'all' || beat.genre === genreFilter;
-    const matchesMood = moodFilter === 'all' || beat.mood === moodFilter;
-    
+    const matchesSearch =
+      beat.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      beat.genre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      beat.mood.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesGenre = genreFilter === "all" || beat.genre === genreFilter;
+    const matchesMood = moodFilter === "all" || beat.mood === moodFilter;
+
     return matchesSearch && matchesGenre && matchesMood;
   });
 
-  const genres = Array.from(new Set(mockBeats.map(beat => beat.genre)));
-  const moods = Array.from(new Set(mockBeats.map(beat => beat.mood)));
+  const genres = Array.from(new Set(mockBeats.map((beat) => beat.genre)));
+  const moods = Array.from(new Set(mockBeats.map((beat) => beat.mood)));
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -40,8 +48,9 @@ export default function MusicCatalog() {
               My Music Catalog
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore my collection of original beats spanning multiple genres and moods. 
-              Each track is crafted with passion and attention to detail.
+              Explore my collection of original beats spanning multiple genres
+              and moods. Each track is crafted with passion and attention to
+              detail.
             </p>
           </motion.div>
         </div>
@@ -66,7 +75,7 @@ export default function MusicCatalog() {
                   className="pl-10"
                 />
               </div>
-              
+
               <div className="flex gap-4">
                 <Select value={genreFilter} onValueChange={setGenreFilter}>
                   <SelectTrigger className="w-40">
@@ -74,8 +83,10 @@ export default function MusicCatalog() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Genres</SelectItem>
-                    {genres.map(genre => (
-                      <SelectItem key={genre} value={genre}>{genre}</SelectItem>
+                    {genres.map((genre) => (
+                      <SelectItem key={genre} value={genre}>
+                        {genre}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -86,8 +97,10 @@ export default function MusicCatalog() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Moods</SelectItem>
-                    {moods.map(mood => (
-                      <SelectItem key={mood} value={mood}>{mood}</SelectItem>
+                    {moods.map((mood) => (
+                      <SelectItem key={mood} value={mood}>
+                        {mood}
+                      </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
@@ -95,9 +108,9 @@ export default function MusicCatalog() {
                 <Button
                   variant="outline"
                   onClick={() => {
-                    setSearchTerm('');
-                    setGenreFilter('all');
-                    setMoodFilter('all');
+                    setSearchTerm("");
+                    setGenreFilter("all");
+                    setMoodFilter("all");
                   }}
                 >
                   <Filter className="w-4 h-4 mr-2" />
@@ -125,7 +138,9 @@ export default function MusicCatalog() {
               animate={{ opacity: 1 }}
             >
               <Music className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-              <h3 className="text-xl font-semibold mb-2 text-foreground">No beats found</h3>
+              <h3 className="text-xl font-semibold mb-2 text-foreground">
+                No beats found
+              </h3>
               <p className="text-muted-foreground">
                 Try adjusting your search or filter criteria
               </p>
