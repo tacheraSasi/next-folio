@@ -20,7 +20,7 @@ export const mockBeats: Beat[] = [
     genre: "Lo-Fi Hip Hop",
     mood: "Chill",
     dateProduced: "2024-01-15",
-    audioUrl: "/audio/midnight-dreams.mp3",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
     description: "A smooth, atmospheric beat perfect for late night sessions"
   },
   {
@@ -31,7 +31,7 @@ export const mockBeats: Beat[] = [
     genre: "Trap",
     mood: "Energetic",
     dateProduced: "2024-01-10",
-    audioUrl: "/audio/urban-pulse.mp3",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
     description: "High-energy trap beat with heavy 808s"
   },
   {
@@ -42,7 +42,7 @@ export const mockBeats: Beat[] = [
     genre: "R&B",
     mood: "Smooth",
     dateProduced: "2024-01-08",
-    audioUrl: "/audio/sunset-vibes.mp3",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
     description: "Smooth R&B instrumental with soulful melodies"
   },
   {
@@ -53,7 +53,7 @@ export const mockBeats: Beat[] = [
     genre: "Electronic",
     mood: "Futuristic",
     dateProduced: "2024-01-05",
-    audioUrl: "/audio/digital-horizon.mp3",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
     description: "Futuristic electronic beat with synthesized elements"
   },
   {
@@ -64,7 +64,7 @@ export const mockBeats: Beat[] = [
     genre: "Jazz Hip Hop",
     mood: "Relaxing",
     dateProduced: "2024-01-01",
-    audioUrl: "/audio/jazz-cafe.mp3",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
     description: "Jazz-influenced hip hop with smooth piano samples"
   },
   {
@@ -75,7 +75,40 @@ export const mockBeats: Beat[] = [
     genre: "Boom Bap",
     mood: "Raw",
     dateProduced: "2023-12-28",
-    audioUrl: "/audio/street-anthem.mp3",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
     description: "Classic boom bap with hard-hitting drums"
+  },
+  {
+    id: "7",
+    title: "Neon Nights",
+    bpm: 130,
+    key: "B minor",
+    genre: "Synthwave",
+    mood: "Nostalgic",
+    dateProduced: "2024-01-20",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+    description: "80s-inspired synthwave with retro analog sounds"
+  },
+  {
+    id: "8",
+    title: "Ocean Breeze",
+    bpm: 100,
+    key: "C major",
+    genre: "Ambient",
+    mood: "Peaceful",
+    dateProduced: "2024-01-18",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+    description: "Ambient soundscape with natural ocean samples"
+  },
+  {
+    id: "9",
+    title: "Fire Flow",
+    bpm: 150,
+    key: "F# minor",
+    genre: "Drill",
+    mood: "Aggressive",
+    dateProduced: "2024-01-12",
+    audioUrl: "https://www.soundjay.com/misc/sounds/bell-ringing-05.wav",
+    description: "Hard-hitting drill beat with intense energy"
   }
 ];

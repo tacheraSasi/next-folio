@@ -13,6 +13,10 @@ import {
   SelectContent,
   SelectItem,
 } from "@radix-ui/react-select";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import StarryBackground from "@/components/StarryBackground";
+import SplashCursor from "@/components/SplashCursor";
 
 export default function MusicCatalog() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,120 +38,129 @@ export default function MusicCatalog() {
   const moods = Array.from(new Set(mockBeats.map((beat) => beat.mood)));
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      {/* Hero Section */}
-      <section className="relative py-20 px-6">
-        <div className="container mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <Music className="w-16 h-16 mx-auto mb-6 text-primary" />
-            <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
-              My Music Catalog
-            </h1>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Explore my collection of original beats spanning multiple genres
-              and moods. Each track is crafted with passion and attention to
-              detail.
-            </p>
-          </motion.div>
-        </div>
-      </section>
+    <>
+      <SplashCursor />
+      <div className="bg-neutral-900 text-white min-h-screen">
+        <StarryBackground />
+        <Header />
+        <main>
+          {/* Hero Section */}
+          <section className="relative py-20 px-6 pt-32">
+            <div className="container mx-auto text-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+              >
+                <Music className="w-16 h-16 mx-auto mb-6 text-green-400" />
+                <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
+                  My Music Catalog
+                </h1>
+                <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                  Explore my collection of original beats spanning multiple genres
+                  and moods. Each track is crafted with passion and attention to
+                  detail.
+                </p>
+              </motion.div>
+            </div>
+          </section>
 
-      {/* Filters Section */}
-      <section className="px-6 pb-8">
-        <div className="container mx-auto">
-          <motion.div
-            className="bg-card/30 backdrop-blur-sm rounded-lg p-6 border border-border/50"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
-            <div className="flex flex-col md:flex-row gap-4 items-center">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
-                <Input
-                  placeholder="Search beats by title, genre, or mood..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-10"
-                />
-              </div>
+          {/* Filters Section */}
+          <section className="px-6 pb-8">
+            <div className="container mx-auto">
+              <motion.div
+                className="bg-neutral-800/50 backdrop-blur-sm rounded-lg p-6 border border-gray-700/50"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.2 }}
+              >
+                <div className="flex flex-col md:flex-row gap-4 items-center">
+                  <div className="relative flex-1">
+                    <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                    <Input
+                      placeholder="Search beats by title, genre, or mood..."
+                      value={searchTerm}
+                      onChange={(e) => setSearchTerm(e.target.value)}
+                      className="pl-10 bg-neutral-700 border-gray-600 text-white placeholder-gray-400"
+                    />
+                  </div>
 
-              <div className="flex gap-4">
-                <Select value={genreFilter} onValueChange={setGenreFilter}>
-                  <SelectTrigger className="w-40">
-                    <SelectValue placeholder="Genre" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Genres</SelectItem>
-                    {genres.map((genre) => (
-                      <SelectItem key={genre} value={genre}>
-                        {genre}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                  <div className="flex gap-4">
+                    <Select value={genreFilter} onValueChange={setGenreFilter}>
+                      <SelectTrigger className="w-40 bg-neutral-700 border-gray-600 text-white">
+                        <SelectValue placeholder="Genre" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">All Genres</SelectItem>
+                        {genres.map((genre) => (
+                          <SelectItem key={genre} value={genre}>
+                            {genre}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                <Select value={moodFilter} onValueChange={setMoodFilter}>
-                  <SelectTrigger className="w-40">
-                    <SelectValue placeholder="Mood" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="all">All Moods</SelectItem>
-                    {moods.map((mood) => (
-                      <SelectItem key={mood} value={mood}>
-                        {mood}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                    <Select value={moodFilter} onValueChange={setMoodFilter}>
+                      <SelectTrigger className="w-40 bg-neutral-700 border-gray-600 text-white">
+                        <SelectValue placeholder="Mood" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="all">All Moods</SelectItem>
+                        {moods.map((mood) => (
+                          <SelectItem key={mood} value={mood}>
+                            {mood}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
 
-                <Button
-                  variant="outline"
-                  onClick={() => {
-                    setSearchTerm("");
-                    setGenreFilter("all");
-                    setMoodFilter("all");
-                  }}
+                    <Button
+                      variant="outline"
+                      onClick={() => {
+                        setSearchTerm("");
+                        setGenreFilter("all");
+                        setMoodFilter("all");
+                      }}
+                      className="border-gray-600 text-white hover:bg-neutral-700"
+                    >
+                      <Filter className="w-4 h-4 mr-2" />
+                      Clear
+                    </Button>
+                  </div>
+                </div>
+              </motion.div>
+            </div>
+          </section>
+
+          {/* Catalog Grid */}
+          <section className="px-6 pb-20">
+            <div className="container mx-auto">
+              {filteredBeats.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredBeats.map((beat, index) => (
+                    <BeatCard key={beat.id} beat={beat} index={index} />
+                  ))}
+                </div>
+              ) : (
+                <motion.div
+                  className="text-center py-20"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
                 >
-                  <Filter className="w-4 h-4 mr-2" />
-                  Clear
-                </Button>
-              </div>
+                  <Music className="w-16 h-16 mx-auto mb-4 text-gray-400" />
+                  <h3 className="text-xl font-semibold mb-2 text-white">
+                    No beats found
+                  </h3>
+                  <p className="text-gray-300">
+                    Try adjusting your search or filter criteria
+                  </p>
+                </motion.div>
+              )}
             </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Catalog Grid */}
-      <section className="px-6 pb-20">
-        <div className="container mx-auto">
-          {filteredBeats.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {filteredBeats.map((beat, index) => (
-                <BeatCard key={beat.id} beat={beat} index={index} />
-              ))}
-            </div>
-          ) : (
-            <motion.div
-              className="text-center py-20"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-            >
-              <Music className="w-16 h-16 mx-auto mb-4 text-muted-foreground" />
-              <h3 className="text-xl font-semibold mb-2 text-foreground">
-                No beats found
-              </h3>
-              <p className="text-muted-foreground">
-                Try adjusting your search or filter criteria
-              </p>
-            </motion.div>
-          )}
-        </div>
-      </section>
-    </div>
+          </section>
+        </main>
+        <Footer />
+      </div>
+    </>
   );
 }

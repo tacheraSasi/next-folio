@@ -17,36 +17,36 @@ export default function BeatCard({ beat, index }: BeatCardProps) {
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.1 }}
     >
-      <Card className="bg-card/50 backdrop-blur-sm border-border/50 hover:bg-card/70 transition-all duration-300">
+      <Card className="bg-neutral-800/50 backdrop-blur-sm border-gray-700/50 hover:bg-neutral-800/70 transition-all duration-300">
         <CardHeader className="space-y-2">
           <div className="flex items-start justify-between">
-            <CardTitle className="text-lg text-foreground">{beat.title}</CardTitle>
-            <Badge variant="secondary" className="ml-2">
+            <CardTitle className="text-lg text-white">{beat.title}</CardTitle>
+            <Badge variant="secondary" className="ml-2 bg-green-400/20 text-green-400 border-green-400/30">
               {beat.genre}
             </Badge>
           </div>
           {beat.description && (
-            <p className="text-sm text-muted-foreground">{beat.description}</p>
+            <p className="text-sm text-gray-300">{beat.description}</p>
           )}
         </CardHeader>
 
         <CardContent className="space-y-4">
           <div className="grid grid-cols-2 gap-4 text-sm">
             <div className="flex items-center gap-2">
-              <Clock className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground">{beat.bpm} BPM</span>
+              <Clock className="w-4 h-4 text-gray-400" />
+              <span className="text-gray-200">{beat.bpm} BPM</span>
             </div>
             <div className="flex items-center gap-2">
-              <Music className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground">{beat.key}</span>
+              <Music className="w-4 h-4 text-gray-400" />
+              <span className="text-gray-200">{beat.key}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Hash className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground">{beat.mood}</span>
+              <Hash className="w-4 h-4 text-gray-400" />
+              <span className="text-gray-200">{beat.mood}</span>
             </div>
             <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4 text-muted-foreground" />
-              <span className="text-foreground">
+              <Calendar className="w-4 h-4 text-gray-400" />
+              <span className="text-gray-200">
                 {new Date(beat.dateProduced).toLocaleDateString()}
               </span>
             </div>
