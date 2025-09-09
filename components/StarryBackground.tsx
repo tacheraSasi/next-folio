@@ -1,7 +1,8 @@
-"use client"
+"use client";
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import Particles from "@/components/Particles";
 
 export default function StarryBackground() {
   const [stars, setStars] = useState<
@@ -99,6 +100,18 @@ export default function StarryBackground() {
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      <div style={{ width: "100%", height: "600px", position: "relative" }}>
+        <Particles
+          particleColors={["#ffffff", "#ffffff"]}
+          particleCount={200}
+          particleSpread={10}
+          speed={0.1}
+          particleBaseSize={100}
+          moveParticlesOnHover={true}
+          alphaParticles={false}
+          disableRotation={false}
+        />
+      </div>
       {stars.map((star) => (
         <motion.div
           key={star.id}
