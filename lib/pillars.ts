@@ -67,3 +67,31 @@ export const pillars = [
     ],
   },
 ];
+
+export const principles = [
+  {
+    title: "Own My Path",
+    desc: "Everything here works even if I’m solo — no waiting for permission.",
+  },
+  {
+    title: "Adapt Fast",
+    desc: "If I’m traveling, I grab a portable keyboard; if I’m sore, I switch to mobility work.",
+  },
+  {
+    title: "Cross-Feed",
+    desc: "Coding sharpens discipline, music fuels creativity, training keeps focus.",
+  },
+  {
+    title: "Consistency Beats Hype",
+    desc: "I rely on steady reps, not random motivation bursts.",
+  },
+  {
+    title: "Track the Wins",
+    desc: "Commits, gym logs, and journal notes keep progress real.",
+  },
+  {
+    title: "Play the Long Game",
+    desc: "By 2030 I want solid open-source work, a body I’m proud of, music released, deep faith, and a steady mind.",
+  },
+];
+

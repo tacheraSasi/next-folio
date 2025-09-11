@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StarryBackground from "@/components/StarryBackground";
 import SplashCursor from "@/components/SplashCursor";
-import { pillars } from "@/lib/pillars";
+import { pillars, principles } from "@/lib/pillars";
 
 export default function PhilosophyPage() {
   return (
@@ -52,17 +52,12 @@ export default function PhilosophyPage() {
                 </h2>
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    These pillars draw from my passions in coding, systems
-                    building, music, physical fitness, intellectual growth, and
-                    spirituality. The goal is a balanced, disciplined life where
-                    each pillar supports the others, fostering long-term growth
-                    and inner peace.
-                  </p>
-                  <p>
-                    This structure ensures I&apos;m not fragmented but focused
-                    on a holistic system that works in isolation, scales with
-                    life changes, and promotes interdependence among the pillars
-                    (e.g., mind fuels creation, spirit drives discipline).
+                    My life runs on five pillars that keep me grounded and
+                    moving forward. They cover what I build, how I stay fit, how
+                    I feed my mind, how I play music, and how I stay connected
+                    to God. They’re simple systems I can lean on whether I’m
+                    shipping a project, training, or just sitting with my
+                    thoughts.
                   </p>
                 </div>
               </motion.div>
@@ -190,32 +185,7 @@ export default function PhilosophyPage() {
                   Principles for Living This Life
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {[
-                    {
-                      title: "Independence",
-                      desc: "Everything is solitude-friendly—no reliance on others",
-                    },
-                    {
-                      title: "Scalability",
-                      desc: "Pillars adapt (e.g., travel → portable guitar; injury → modified Body routines)",
-                    },
-                    {
-                      title: "Balance & Synergy",
-                      desc: "Each pillar feeds others—e.g., Spirit provides motivation for all",
-                    },
-                    {
-                      title: "Discipline Over Motivation",
-                      desc: "Habits build through consistency, not mood",
-                    },
-                    {
-                      title: "Measurement",
-                      desc: "Track via journal or app: project commits, workout logs",
-                    },
-                    {
-                      title: "Long-Term Vision",
-                      desc: "By 2030, have impactful software, music catalog, peak physical form, published writings, deepened faith",
-                    },
-                  ].map((principle) => (
+                  {principles.map((principle) => (
                     <div
                       key={principle.title}
                       className="bg-neutral-700/50 rounded-lg p-4"
