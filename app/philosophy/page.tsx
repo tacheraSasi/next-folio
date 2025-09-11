@@ -1,75 +1,13 @@
-"use client"
+"use client";
 import { motion } from "framer-motion";
-import { Brain, Code, Music, Dumbbell, Book, Heart } from "lucide-react";
+import { Brain } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StarryBackground from "@/components/StarryBackground";
 import SplashCursor from "@/components/SplashCursor";
+import { pillars } from "@/lib/pillars";
 
 export default function PhilosophyPage() {
-  const pillars = [
-    {
-      icon: Code,
-      title: "Creation (Programming & Engineering)",
-      description: "Building software, tools, and systems that have lasting impact and outlive me.",
-      color: "text-blue-400",
-      activities: [
-        "Develop and evolve projects like VintLang, Ekilisense, Ellie",
-        "Contribute to open-source repositories",
-        "Maintain a personal portfolio showcasing innovation",
-        "Complete major project milestones quarterly"
-      ]
-    },
-    {
-      icon: Music,
-      title: "Music (Expression & Flow)",
-      description: "Pure form of self-expression and therapy, independent of performance or audience.",
-      color: "text-green-400",
-      activities: [
-        "Play guitar, practice a cappella and beatboxing",
-        "Write songs and record demos",
-        "Explore small personal releases",
-        "Create one original piece monthly"
-      ]
-    },
-    {
-      icon: Dumbbell,
-      title: "Body (Strength & Presence)",
-      description: "Physical health for reliability and endurance, not vanity.",
-      color: "text-red-400",
-      activities: [
-        "Gym workouts, calisthenics, basketball",
-        "Strength training, cardio, and mobility",
-        "Train 4-5 days weekly",
-        "Maintain healthy diet and sleep routine"
-      ]
-    },
-    {
-      icon: Book,
-      title: "Mind (Learning & Philosophy)",
-      description: "Building a rich inner world through continuous learning and reflection.",
-      color: "text-purple-400",
-      activities: [
-        "Deepen programming knowledge alongside philosophy",
-        "Journal daily, write essays, read widely",
-        "Read one book per month",
-        "Apply learnings to real-world systems"
-      ]
-    },
-    {
-      icon: Heart,
-      title: "Spirit (Faith & Solitude)",
-      description: "Anchoring in something transcendent, rooted in Seventh-day Adventist beliefs.",
-      color: "text-yellow-400",
-      activities: [
-        "Prayer, Sabbath observance, scripture study",
-        "Meditation, silence, and occasional fasting",
-        "Daily prayer and meditation",
-        "Weekly Sabbath as full reset"
-      ]
-    }
-  ];
-
   return (
     <>
       <SplashCursor />
@@ -90,7 +28,11 @@ export default function PhilosophyPage() {
                   My Life Philosophy
                 </h1>
                 <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  This document outlines the vision for my life, centered around five core pillars that provide structure, purpose, and fulfillment. These pillars are designed to be self-sustaining, independent of external relationships or validation, and adaptable to solitude.
+                  This document outlines the vision for my life, centered around
+                  five core pillars that provide structure, purpose, and
+                  fulfillment. These pillars are designed to be self-sustaining,
+                  independent of external relationships or validation, and
+                  adaptable to solitude.
                 </p>
               </motion.div>
             </div>
@@ -105,16 +47,21 @@ export default function PhilosophyPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
               >
-                <h2 className="text-3xl font-bold mb-6 text-green-400">Introduction</h2>
+                <h2 className="text-3xl font-bold mb-6 text-green-400">
+                  Introduction
+                </h2>
                 <div className="space-y-4 text-gray-300 leading-relaxed">
                   <p>
-                    These pillars draw from my passions in coding, systems building, music, physical fitness, 
-                    intellectual growth, and spirituality. The goal is a balanced, disciplined life where each 
-                    pillar supports the others, fostering long-term growth and inner peace.
+                    These pillars draw from my passions in coding, systems
+                    building, music, physical fitness, intellectual growth, and
+                    spirituality. The goal is a balanced, disciplined life where
+                    each pillar supports the others, fostering long-term growth
+                    and inner peace.
                   </p>
                   <p>
-                    This structure ensures I&apos;m not fragmented but focused on a holistic system that works in 
-                    isolation, scales with life changes, and promotes interdependence among the pillars 
+                    This structure ensures I&apos;m not fragmented but focused
+                    on a holistic system that works in isolation, scales with
+                    life changes, and promotes interdependence among the pillars
                     (e.g., mind fuels creation, spirit drives discipline).
                   </p>
                 </div>
@@ -125,7 +72,7 @@ export default function PhilosophyPage() {
           {/* Core Pillars */}
           <section className="px-6 pb-12">
             <div className="container mx-auto max-w-6xl">
-              <motion.h2 
+              <motion.h2
                 className="text-4xl font-bold text-center mb-12 text-white"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -133,7 +80,7 @@ export default function PhilosophyPage() {
               >
                 The 5 Core Pillars
               </motion.h2>
-              
+
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {pillars.map((pillar, index) => (
                   <motion.div
@@ -145,14 +92,23 @@ export default function PhilosophyPage() {
                   >
                     <div className="flex items-center mb-4">
                       <pillar.icon className={`w-8 h-8 mr-3 ${pillar.color}`} />
-                      <h3 className="text-xl font-semibold text-white">{pillar.title}</h3>
+                      <h3 className="text-xl font-semibold text-white">
+                        {pillar.title}
+                      </h3>
                     </div>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{pillar.description}</p>
+                    <p className="text-gray-300 mb-4 leading-relaxed">
+                      {pillar.description}
+                    </p>
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">Key Activities:</h4>
+                      <h4 className="text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">
+                        Key Activities:
+                      </h4>
                       <ul className="space-y-1">
                         {pillar.activities.map((activity, actIndex) => (
-                          <li key={actIndex} className="text-sm text-gray-300 flex items-start">
+                          <li
+                            key={actIndex}
+                            className="text-sm text-gray-300 flex items-start"
+                          >
                             <span className="text-green-400 mr-2">•</span>
                             {activity}
                           </li>
@@ -230,26 +186,52 @@ export default function PhilosophyPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1.0 }}
               >
-                <h2 className="text-3xl font-bold mb-6 text-green-400">Principles for Living This Life</h2>
+                <h2 className="text-3xl font-bold mb-6 text-green-400">
+                  Principles for Living This Life
+                </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {[
-                    { title: "Independence", desc: "Everything is solitude-friendly—no reliance on others" },
-                    { title: "Scalability", desc: "Pillars adapt (e.g., travel → portable guitar; injury → modified Body routines)" },
-                    { title: "Balance & Synergy", desc: "Each pillar feeds others—e.g., Spirit provides motivation for all" },
-                    { title: "Discipline Over Motivation", desc: "Habits build through consistency, not mood" },
-                    { title: "Measurement", desc: "Track via journal or app: project commits, workout logs" },
-                    { title: "Long-Term Vision", desc: "By 2030, have impactful software, music catalog, peak physical form, published writings, deepened faith" }
+                    {
+                      title: "Independence",
+                      desc: "Everything is solitude-friendly—no reliance on others",
+                    },
+                    {
+                      title: "Scalability",
+                      desc: "Pillars adapt (e.g., travel → portable guitar; injury → modified Body routines)",
+                    },
+                    {
+                      title: "Balance & Synergy",
+                      desc: "Each pillar feeds others—e.g., Spirit provides motivation for all",
+                    },
+                    {
+                      title: "Discipline Over Motivation",
+                      desc: "Habits build through consistency, not mood",
+                    },
+                    {
+                      title: "Measurement",
+                      desc: "Track via journal or app: project commits, workout logs",
+                    },
+                    {
+                      title: "Long-Term Vision",
+                      desc: "By 2030, have impactful software, music catalog, peak physical form, published writings, deepened faith",
+                    },
                   ].map((principle) => (
-                    <div key={principle.title} className="bg-neutral-700/50 rounded-lg p-4">
-                      <h3 className="text-lg font-semibold text-white mb-2">{principle.title}</h3>
+                    <div
+                      key={principle.title}
+                      className="bg-neutral-700/50 rounded-lg p-4"
+                    >
+                      <h3 className="text-lg font-semibold text-white mb-2">
+                        {principle.title}
+                      </h3>
                       <p className="text-gray-300 text-sm">{principle.desc}</p>
                     </div>
                   ))}
                 </div>
                 <div className="mt-6 p-4 bg-gradient-to-r from-green-900/50 to-green-800/50 rounded-lg border border-green-700/50">
                   <p className="text-green-200 italic text-center">
-                    &quot;This structure isn&apos;t rigid—it&apos;s a compass. Living this way ensures a life of purpose, 
-                    growth, and contentment, regardless of external factors.&quot;
+                    &quot;This structure isn&apos;t rigid—it&apos;s a compass.
+                    Living this way ensures a life of purpose, growth, and
+                    contentment, regardless of external factors.&quot;
                   </p>
                 </div>
               </motion.div>
