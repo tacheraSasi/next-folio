@@ -25,14 +25,15 @@ export default function PhilosophyPage() {
               >
                 <Brain className="w-16 h-16 mx-auto mb-6 text-green-400" />
                 <h1 className="text-5xl font-bold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
-                  My Life Philosophy
+                  How I Run My Life
                 </h1>
                 <p className="text-xl text-gray-300 max-w-4xl mx-auto">
-                  This document outlines the vision for my life, centered around
-                  five core pillars that provide structure, purpose, and
-                  fulfillment. These pillars are designed to be self-sustaining,
-                  independent of external relationships or validation, and
-                  adaptable to solitude.
+                  This page is my playbook  the five pillars I use to stay
+                  grounded, grow, and keep building cool stuff. They’re systems
+                  I can lean on whether I’m coding, lifting, jamming on guitar,
+                  or taking a quiet Sabbath. Everything here works with or
+                  without an audience, and it keeps me steady even when life
+                  flips upside down.
                 </p>
               </motion.div>
             </div>
@@ -199,7 +200,7 @@ export default function PhilosophyPage() {
                 </div>
                 <div className="mt-6 p-4 bg-gradient-to-r from-green-900/50 to-green-800/50 rounded-lg border border-green-700/50">
                   <p className="text-green-200 italic text-center">
-                    &quot;This structure isn&apos;t rigid—it&apos;s a compass.
+                    &quot;This structure isn&apos;t rigid it&apos;s a compass.
                     Living this way ensures a life of purpose, growth, and
                     contentment, regardless of external factors.&quot;
                   </p>
